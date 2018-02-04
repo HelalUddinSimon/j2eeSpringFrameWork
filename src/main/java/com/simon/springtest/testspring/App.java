@@ -14,8 +14,14 @@ public class App
     {
     	ApplicationContext context = new ClassPathXmlApplicationContext("com/simon/springtest/testspring/beans/beans.xml");
     	
-    	Patient patient = (Patient) context.getBean("patient");
-        System.out.println( patient );
+    	Patient patient1 = (Patient) context.getBean("patient");
+    	Patient patient2 = (Patient) context.getBean("patient");
+        
+    	patient1.setName("helal");
+    	patient2.setName("asd");
+    	
+        System.out.println( patient1);
+        System.out.println( patient2);
         
     	//Address addr = (Address) context.getBean("address");
         //System.out.println( addr );
